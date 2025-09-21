@@ -1,0 +1,193 @@
+/* variables */
+:root {
+      --fondo: hsl(218, 23%, 16%); 
+      --espaciado-mediano: 16px;
+    }
+
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
+}
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    font-family: 'Manrope';
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--fondo);
+}
+
+/* Estilos contenedor de avisos */
+.container-advice{
+    padding: auto;
+    left: 17rem;
+    top: 7rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    gap: 36px;
+    background-color: hsl(217, 19%, 24%);
+    width: 35%;
+    height: 300px;
+    border-radius: 3%;
+    
+    
+}
+/* Cartel de el numero de aviso */
+.numberAdvice{
+    color:hsl(150, 100%, 66%) ;
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 60px;
+
+}
+
+/* Estilo de el numero de el consejo */
+.number {
+    font-size: 14px;
+}
+
+/* Contenedor de la imagen al final */
+#img2{
+    margin-top: 270px;
+    width: 50px;
+    height: 50px;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Imagen al final */
+#img2 img {
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    margin: 17px;
+    padding: 0;
+}
+
+#img2 img:hover {
+    cursor: pointer;
+}
+
+/* Estilo de el consejo-texto */
+.advice-text {
+    color: hsl(193, 38%, 86%);
+    font: solid;
+    font-size: 22px;
+}
+
+/* Estilo imagen 1 */
+#img1 {
+    position: absolute;
+    margin-top: 220px;
+    
+}
+
+
+/* Diseño responsivo  */
+
+/* Movil */
+/* Móvil - hasta 375px */
+@media (max-width: 375px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 16px;
+    }
+    
+    .container-advice {
+        width: 90%;
+        max-width: 345px;
+        left: auto;
+        top: auto;
+        height: 315px;
+        gap: 24px;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+    
+    .numberAdvice {
+        margin-top: 40px;
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+    
+    .number {
+        font-size: 11px;
+    }
+    
+    .advice-text {
+        font-size: 22px;
+        padding: 0;
+        line-height: 1.4;
+        margin-top: -10px;
+    }
+    
+    #img1 {
+        content: url('./images/pattern-divider-mobile.svg');
+        width: 295px;
+        margin-top: 200px;
+    }
+    
+    #img2 {
+        margin-top: 285px;
+        width: 64px;
+        height: 64px;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    #img2:hover {
+        box-shadow: 0 0 20px hsl(150, 100%, 66%);
+        cursor: pointer;
+    }
+    
+    #img2 img {
+        width: 24px;
+        height: 24px;
+        margin: 20px;
+    }
+}
+
+/* Desktop grande - 1440px o más */
+@media (min-width: 1440px) {
+    .container-advice {
+        left: calc(50% - 280px); 
+        width: 560px; 
+    }
+}
+
+/* Tablet - entre 376px y 1023px */
+@media (max-width: 1023px) and (min-width: 376px) {
+    .container-advice {
+        width: 60%;
+        left: 10rem;
+        height: 320px;
+    }
+    
+    #img1 {
+        width: 90%;
+        margin-top: 240px;
+    }
+    
+    #img2 {
+        margin-top: 290px;
+    }
+    
+    .advice-text {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+}
