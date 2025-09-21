@@ -9,6 +9,10 @@
     font-family: 'Manrope';
     src: url(./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: 'ManropeBold';
+    src: url(./assets/fonts/Manrope/static/Manrope-Bold.ttf);
+}
 
 * {
     
@@ -85,6 +89,7 @@ body {
     color: hsl(193, 38%, 86%);
     font: solid;
     font-size: 22px;
+    font-family: 'ManropeBold';
 }
 
 /* Estilo imagen 1 */
@@ -97,8 +102,8 @@ body {
 
 /* Diseño responsivo  */
 
-/* Movil */
-/* Móvil - hasta 375px */
+
+/* Móvil-375px */
 @media (max-width: 375px) {
     body {
         display: flex;
