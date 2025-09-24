@@ -30,6 +30,7 @@ body {
     min-height: 100vh;
     background-color: var(--dark-blue);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: var(--espaciado-mediano);
@@ -41,7 +42,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     background-color: var(--dark-grayish-blue);
     border-radius: 15px;
     padding: 45px 40px 70px;
@@ -54,7 +55,7 @@ body {
 /* Cartel del número de aviso */
 .numberAdvice {
     color: var(--primary-cyan);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -63,7 +64,7 @@ body {
 
 /* Estilo del número del consejo */
 .number {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Estilo del consejo-texto */
@@ -74,6 +75,7 @@ body {
     line-height: 1.4;
     margin: 20px 0;
     text-align: center;
+    letter-spacing: -0.3px;
 }
 
 .text-advice-container {
@@ -83,7 +85,7 @@ body {
 /* Estilo imagen divisora */
 #img1 {
     width: 100%;
-    margin: 20px 0 30px;
+    margin: 10px 0 30px;
 }
 
 /* Contenedor del botón */
@@ -115,8 +117,7 @@ body {
 }
 
 .attribution {
-    position: absolute;
-    bottom: 20px;
+    margin-top: 50px;
     font-size: 11px;
     text-align: center;
     color: var(--primary-light-cyan);
@@ -140,24 +141,21 @@ body {
     }
     
     .numberAdvice {
-        font-size: 11px;
+        font-size: 10px;
         letter-spacing: 3px;
         margin-bottom: 5px;
     }
     
     .advice-text {
-        font-size: 24px;
+        font-size: 22px;
         margin: 15px 0;
         line-height: 1.3;
-    }
-    
-    .advice-text br {
-        display: none;
+        letter-spacing: -0.2px;
     }
     
     #img1 {
         content: url('./images/pattern-divider-mobile.svg');
-        margin: 15px 0 25px;
+        margin: 10px 0 25px;
     }
     
     #img2 {
@@ -182,7 +180,7 @@ body {
     }
     
     .numberAdvice {
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing: 3.5px;
     }
     
@@ -193,7 +191,7 @@ body {
     
     #img1 {
         content: url('./images/pattern-divider-desktop.svg');
-        margin: 25px 0 35px;
+        margin: 15px 0 35px;
     }
     
     #img2 {
@@ -218,7 +216,7 @@ body {
     }
     
     .numberAdvice {
-        font-size: 13px;
+        font-size: 12px;
         letter-spacing: 4px;
     }
     
@@ -229,7 +227,7 @@ body {
     
     #img1 {
         content: url('./images/pattern-divider-desktop.svg');
-        margin: 25px 0 35px;
+        margin: 15px 0 35px;
     }
     
     #img2:hover {
@@ -246,7 +244,7 @@ body {
     }
     
     .numberAdvice {
-        font-size: 13px;
+        font-size: 12px;
         letter-spacing: 4.5px;
     }
     
@@ -257,75 +255,10 @@ body {
     
     #img1 {
         content: url('./images/pattern-divider-desktop.svg');
-        margin: 30px 0 40px;
+        margin: 15px 0 40px;
     }
     
     #img2:hover {
         box-shadow: 0 0 35px var(--primary-cyan);
-    }
-}
-
-/* Para pantallas muy grandes (4K, etc) */
-@media (min-width: 2000px) {
-    .container-advice {
-        width: 600px;
-        padding: 60px 50px 90px;
-        gap: 35px;
-    }
-    
-    .numberAdvice {
-        font-size: 16px;
-        letter-spacing: 5px;
-    }
-    
-    .advice-text {
-        font-size: 32px;
-        margin: 35px 0;
-    }
-    
-    #img1 {
-        margin: 35px 0 45px;
-    }
-    
-    #img2 {
-        width: 70px;
-        height: 70px;
-        bottom: -35px;
-    }
-    
-    .img-button {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-/* Ajustes específicos para el texto del consejo en móvil */
-@media (max-width: 375px) {
-    .advice-text {
-        font-size: 22px;
-        padding: 0 5px;
-    }
-    
-    .advice-text br {
-        display: none;
-    }
-}
-
-/* Ajustes para tablets en orientación vertical */
-@media (max-width: 1023px) and (orientation: portrait) {
-    .container-advice {
-        width: 85%;
-    }
-}
-
-/* Ajustes para tablets en orientación horizontal */
-@media (max-width: 1023px) and (orientation: landscape) {
-    .container-advice {
-        width: 70%;
-        max-width: 600px;
-    }
-    
-    .advice-text {
-        font-size: 24px;
     }
 }
